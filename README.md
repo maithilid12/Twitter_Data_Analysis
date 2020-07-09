@@ -9,6 +9,11 @@
 7. Results
 8. Summary
 
+<div align = 'center'>
+  <img src = "Images/doggo1.JPG">
+   <p> Source: via Boston Magazine </p>
+</div>
+
 # Introduction
 **In this project:**
 - I have gathered, assessed, cleaned and analyzed data of over 5000+ tweets of the Twitter account [WeRateDogs]("https://twitter.com/dog_rates?lang=de"). 
@@ -22,7 +27,10 @@
 3. What are the most active hours for the twitter account?
 4. Which is the most common source used to post the tweets?
 
-
+<div align = 'center'>
+  <img src = "Images/doggo2.JPG">
+   <p> A golden retriever named Stuart </p>
+</div>
 
 # Prerequisites
 1. Pandas (for data loading and analysis)
@@ -30,7 +38,9 @@
 3. Matplotlib (for visualizations)
 4. Seaborn (for visualizations)
 5. Tweepy (for querying twitter data)
-5. Jupyter (to run notebooks)
+6. json (for additional tweet data)
+7. Requests (for programmatic download)
+8. Jupyter (to run notebooks)
 
 # File Description
 There are three folders:
@@ -47,6 +57,8 @@ There are three folders:
    - wrangling_steps: Data Wrangling steps performed
 4. Images 
    - fig1.png-fig17.png: Visualizations in data analysis part
+   - doggo1.jpg and doggo2.jpg: Dog images from WeRateDogs account
+   - tweet_predict.jpg: Image prediction file
 
 # Data Gathering
 **1. WeRateDogs™ Twitter Archive (twitter-archive-enhanced.csv)**
@@ -54,6 +66,11 @@ I commenced the data gathering process by manual download of the twitter archive
 
 **2. Tweet image predictions (image_predictions.tsv)**
 To gather this data file I first defined the source url where this file resides. Then I used the requests method to get the file from the source and then stored the contents of the response in a tsv file name image_predictions.tsv. It includes attributes related to image url, three classifications, confidence levels for each and a boolean value to indicate whether the image is of a dog.
+
+<div align = 'center'>
+  <img src = "Images/tweet_predict.JPG">
+   <p> Tweet Image Prediction Data </p>
+</div>
 
 **3. Additional Twitter data using Tweepy API (tweet_json.txt)**
 To gather the data from the Twitter API I created a Twitter developer account and gathered the data via tweepy API. This results in a new file called tweet_json.txt. This includes additional tweet data related to favorite counts, retweet counts and tweet text length.
